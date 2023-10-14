@@ -1,3 +1,4 @@
+import 'package:code_qr_app/form_widg.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,24 +11,15 @@ class CodeQRApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: const Text('QR APP'),
-            centerTitle: true,
-            backgroundColor: const Color.fromARGB(255, 0, 0, 0),
-          ),
-          body: const Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: 'Usuario',
-                        contentPadding: EdgeInsets.all(10.0)),
-                  ),
-                ],
-              ))),
-    );
+        home: Scaffold(
+      appBar: AppBar(
+        title: const Text('QR APP'),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      ),
+      body: const FormWidg(),
+      floatingActionButton:
+          FloatingActionButton(onPressed: FormWidgState().fetchUsers),
+    ));
   }
 }

@@ -18,8 +18,6 @@ class CodeQRApp extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       body: const FormWidg(),
-      floatingActionButton:
-          FloatingActionButton(onPressed: FormWidgState().fetchUsers),
     ));
   }
 }

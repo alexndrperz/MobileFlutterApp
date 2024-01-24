@@ -4,7 +4,6 @@ import qrcode, io, png
 
 from PIL import Image
 import qrcode.image.svg
-import pyqrcode
 
 class QrView(viewsets.ModelViewSet):
 

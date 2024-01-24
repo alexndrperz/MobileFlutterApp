@@ -50,7 +50,6 @@ class FormWidgState extends State<FormWidg> {
   }
 
   Future<void> fetchQr(String user) async {
-    print(user);
     final response =
         await http.get(Uri.parse('http://127.0.0.1:8000/qr_generate/$user'));
     if (response.statusCode == 200) {
@@ -59,9 +58,7 @@ class FormWidgState extends State<FormWidg> {
         _image = img.decodeImage(Uint8List.fromList(bytes));
       });
 
-      print(_image);
     } else {
-      print(response.statusCode);
     }
   }
 }

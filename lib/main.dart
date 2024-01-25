@@ -11,13 +11,14 @@ class CodeQRApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
-      appBar: AppBar(
-        title: const Text('QR APP'),
-        centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
-      ),
-      body: const FormWidg(),
-    ));
+          appBar: AppBar(
+            title: const Text('Kevin es Gay '),
+            centerTitle: true,
+            backgroundColor: Color.fromARGB(255, 174, 174, 174),
+          ),
+          body: const FormWidg(),
+        ));
   }
 }
